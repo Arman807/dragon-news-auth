@@ -9,7 +9,7 @@ const Info = ({info}) => {
                 <p className='text-2xl font-bold'>{title}</p>
                 <img src={image_url} alt="" />
                 {
-                    details.length>200 ? <div>{ details.slice(0,200)}<Link><p className='text-blue-500'>Read More </p></Link> </div>:<p></p>
+                    details.length>200 ? <div>{ details.slice(0,200)}<Link to={`/info/${_id}`}><p className='text-blue-500'>Read More </p></Link> </div>:<p></p>
                 }
             </div>
         </div>

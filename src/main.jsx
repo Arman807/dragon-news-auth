@@ -12,6 +12,8 @@ import {
 } from "react-router-dom";
 import AuthProvider from './Provider/AuthProvider';
 import Registration from './Pages/Registration/Registration';
+import ReadMore from './ReadMore/ReadMore';
+import PrivateRouter from './PrivateRoute/PrivateRouter';
 
 
 const router = createBrowserRouter([
@@ -34,6 +36,9 @@ const router = createBrowserRouter([
       },{
         path:"/register",
         element:<Registration></Registration>
+      },{
+        path:"/info/:id",
+        element:<PrivateRouter><ReadMore></ReadMore></PrivateRouter>
       }
     ]
   },
